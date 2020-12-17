@@ -9,8 +9,6 @@ def day_seven(input_list, target_bag):
     # list that acts like a set. need order so using list for now
     contain_target_set = set()
 
-    num_of_bags = 0
-
     for line in input_list:
         line = line.split()
 
@@ -50,7 +48,6 @@ def day_seven(input_list, target_bag):
 def day_seven_part_two(target):
     # target string should not contain space
     total = 0
-    n_bags = 0
 
     for line in input:
         line = line.split()
