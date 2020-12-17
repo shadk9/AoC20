@@ -31,7 +31,7 @@ def day_seven(input_list, target_bag):
                 if contained_bag == target_bag and contained_bag not in contain_target_set:
                     contain_target_set.add(curr_bag)
 
-    eventually_contain_list = set()
+    eventually_contain_set = set()
 
     while contain_target_set:
         curr_b = contain_target_set.pop()
@@ -41,9 +41,9 @@ def day_seven(input_list, target_bag):
                 if item == curr_b:
                     contain_target_set.add(key)
 
-        eventually_contain_list.add(curr_b)
+        eventually_contain_set.add(curr_b)
 
-    print(len(eventually_contain_list))
+    print(len(eventually_contain_set))
 
 
 # Part 2
