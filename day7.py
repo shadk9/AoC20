@@ -6,7 +6,7 @@ with open('input_day7') as file:
 def day_seven(input_list, target_bag):
     # target string should not contain space
     bag_dict = {}
-    # list that acts like a set. need order so using list for now
+
     contain_target_set = set()
 
     for line in input_list:
@@ -25,8 +25,8 @@ def day_seven(input_list, target_bag):
             else:
                 bag_dict[curr_bag].append(contained_bag)
 
-                # membership test ensures that the list only contains uniqe elements
-                if contained_bag == target_bag and contained_bag not in contain_target_set:
+
+                if contained_bag == target_bag:
                     contain_target_set.add(curr_bag)
 
     eventually_contain_set = set()
@@ -43,7 +43,7 @@ def day_seven(input_list, target_bag):
 
     print(len(eventually_contain_set))
 
-
+day_seven(input, 'shinygold')
 # Part 2
 def day_seven_part_two(target):
     # target string should not contain space
