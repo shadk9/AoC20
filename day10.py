@@ -19,3 +19,6 @@ def day10(input):
     print(dist_dict[1] * dist_dict[3])
 
 day10(input)
+
+
+
